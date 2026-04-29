@@ -1,0 +1,10 @@
+services:
+  astercraft-agent:
+    build: .
+    container_name: astercraft-agent-workflow
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./runtime:/app/runtime
